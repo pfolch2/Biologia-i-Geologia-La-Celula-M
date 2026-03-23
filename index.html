@@ -235,7 +235,7 @@ function startReading(selectedMode){
   if(mode==="full"){
     let text=document.querySelector("#page"+currentPage+" .readable").innerText;
     let utter=new SpeechSynthesisUtterance(text);
-    utter.lang="ca-ES";
+    utter.lang="es-ES";
     speechSynthesis.speak(utter);
   } else {
     speakWord();
@@ -254,7 +254,7 @@ function speakWord(){
   word.classList.add(mode==="normal"?"highlight-normal":"highlight-slow");
 
   let utter=new SpeechSynthesisUtterance(word.textContent);
-  utter.lang="ca-ES";
+  utter.lang="es-ES";
 
   utter.onend=function(){
     if(mode==="slow"){
